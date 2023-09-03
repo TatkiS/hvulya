@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Радіо "Зіпсована Хвиля"</title>
+    <style>
+        /* Основні стилі */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: linear-gradient(to bottom, #0057B8, #FFD700);
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Стилі для заголовку */
+        header {
+            background-color: #0057B8;
+            color: #FFD700;
+            padding: 1em;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Стилі для аудіо */
+        audio {
+            margin-top: 20px;
+            width: 95%;
+            max-width: 400px; /* Забезпечення максимальної ширини на мобільних пристроях */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Стилі для віджету */
+        div {
+            background: rgba(0, 87, 184, 0.8);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #FFD700;
+        }
+
+        /* Мобільна адаптація */
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Радіо "Зіпсована Хвиля"</h1>
+    </header>
+
+    <audio controls>
+        <source src="http://15404.cloudrad.io:9020/live?type=http&nocache=8" type="audio/mpeg">
+        Ваш браузер не підтримує аудіо елемент.
+    </audio>
+
+    <div>
+        <h2>Поточна пісня: <span id="stream_info_song">Завантаження...</span></h2>
+        <h2>Назва потоку: <span id="stream_info_title">Завантаження...</span></h2>
+        <h2>Бітрейт: <span id="stream_info_bitrate">Завантаження...</span></h2>
+        <h2>Поточні слухачі: <span id="stream_info_listeners">Завантаження...</span></h2>
+        <h2>Максимальна кількість слухачів: <span id="stream_info_maxlisteners">Завантаження...</span></h2>
+        <h2>Статус джерела: <span id="stream_info_source">Завантаження...</span></h2>
+        <h2>Останні треки: <span id="stream_info_songhistory">Завантаження...</span></h2>
+    </div>
+
+    <script language="javascript" type="text/javascript" src="https://cdn2.cloudrad.io/RadioZipsuvanaHvilya/live/streaminfo.js"></script>
+
+</body>
+</html>
